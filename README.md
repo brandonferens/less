@@ -35,38 +35,38 @@ In the plugin folder ('app/Plugins/Less') type
 ## Usage
 Where you want to use LESS files, add the helper. Usually this will be your `AppController`.
 
-  public $helpers = array('Less.Less');
+    public $helpers = array('Less.Less');
 
 Next, simply add the less files to your views:
 
-  echo $this->Less->css('yourfile');
+    echo $this->Less->css('yourfile');
 
 #### Multiple less files
 
-  echo $this->Less->css(
-    array(
-      'bootstrap/bootstrap',
-      'prettify',
-    )
-  );
+    echo $this->Less->css(
+      array(
+        'bootstrap/bootstrap',
+        'prettify',
+      )
+    );
 
 #### Themes
 
-  echo $this->Less->css(
-    'yourfile',
-    array(
-      'theme' => 'yourtheme'
-    )
-  );
+    echo $this->Less->css(
+      'yourfile',
+      array(
+        'theme' => 'yourtheme'
+      )
+    );
 
 #### CSS file compression
 
-  echo $this->Less->css(
-    'yourfile',
-    array(
-      'compressed' => 'classic'
-    )
-  );
+    echo $this->Less->css(
+      'yourfile',
+      array(
+        'compressed' => 'classic'
+      )
+    );
 
 Possible compression methods:
 * `classic` lessphp’s original formatter
@@ -76,12 +76,12 @@ Possible compression methods:
 
 #### If the less file is located in the webroot of a plugin
 
-  echo $this->Less->css(
-    'yourfile',
-    array(
-      'plugin' => 'PluginFolderName'
-    )
-  );
+    echo $this->Less->css(
+      'yourfile',
+      array(
+        'plugin' => 'PluginFolderName'
+      )
+    );
 
 
 It doesn't matter if you link to stolen .css files directly, the Helper will check for the existance of a .less version first, and fall back if it doesn't find one.
