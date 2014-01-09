@@ -102,6 +102,7 @@ class LessHelper extends AppHelper {
           $compressed = 'classic';
           break;
         case null:
+        case '':
           $compressed = null;
           break;
         default:
